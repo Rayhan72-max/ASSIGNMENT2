@@ -3,6 +3,16 @@ body{
     background-color: black;
     color: white;
 }
+a:active{
+    background-color: #E6533C;
+    padding: 8px;
+    border-radius: 12px;
+}
+.links{
+    background-color: #352f2f;
+    padding: 8px;
+    border-radius: 12px;
+}
 .navbar{  
     display: flex;
     justify-content: space-around;
@@ -21,6 +31,7 @@ body{
 }
 .inside-banner{
     display: flex;
+    justify-content: space-between;
 }
  
 
@@ -45,6 +56,10 @@ body{
     position: absolute;
     top: 350px;
     left:0;
+}
+.change>div>img{
+    border: 4px solid rgba(0,0,0, 0.4);
+    border-radius: 9999px;
 }
 .mile{
     background-color: #888888;
@@ -91,16 +106,26 @@ table,th{
     justify-items: center;
 }
 
-.gellary>img{
+.gellary>div>img{
     border-radius: 4px;
     width: 326px;
     height: 272px;
 }
+.testi{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 8px;
+}
+.testi>div{
+    border: 1px solid white;
+    padding: 8px;
+}
+
 .footer{
     padding:8px;
     margin-top: 16px;
-    
-    background-color: #888888;
+    background-color: #222222
 }
 .inside-footer{
     display: flex;
@@ -110,13 +135,69 @@ table,th{
     width: 30%;
     text-align: start;
 }
+/* computer view */
+@media only screen and (min-width: 900px) {
+.icon{
+    display: none;
+}
+.banner-text{
+    font-size: 60px;
+    font-weight: bold;
+}
+.inside-banner{
+    padding: 50px;
+}
+.inside-banner>div{
+    width: 40%;
+}
 
+.mile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 150px 100px 150px;
+}
+.mile>div{
+    width: 40%;
+}
+.mile>img{
+    width: 50%;
+}
+.bmi{
+    width:40%;
+    margin:auto;
+}
+.calculator{
+    display: flex;
+    justify-content: center;
+}
+.calculator>div{
+    width: 40%;
+}
+.change{
+    display: flex;
+    gap: 4px;
+    padding: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+.change>div{
+    width: 16%;
+}
+.inter-uniquifier{
+    font-size: 30px;
+}
+}
 /*MOBILE VIEW  */
 
 @media only screen and (max-width: 600px) {
     .inside-banner{
         display: flex;
         flex-direction: column;
+    }
+    .icon{
+        display: inline;
     }
     .tabs{
       display: none;
@@ -134,10 +215,7 @@ table,th{
     .change>div{
         width: 60%;
     }
-    .change>div>img{
-        border: 4px solid rgba(0,0,0, 0.4);
-        border-radius: 9999px;
-    }
+    
     .mile{
         display: flex;
         flex-direction: column;
@@ -146,17 +224,27 @@ table,th{
     .mile>h1{
         text-align: start;
     }
+    .mile>div>button{
+        text-align: center;
+    }
+    
     .gellary{
         background-color: #22222222;
         padding: 8px;
         display: flex;
         flex-direction: column;
     }
-    .inside-footer{
+    .testi{
         display: flex;
         flex-direction: column;
+        gap: 2px;
+        
     }
-
+    .inside-footer,.strt1,.strt2{
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 
