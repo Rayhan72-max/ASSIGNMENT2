@@ -2,6 +2,7 @@ body{
     margin:0;
     background-color: black;
     color: white;
+    overflow-x:hidden;
 }
 a:active{
     background-color: #E6533C;
@@ -17,7 +18,6 @@ a:active{
     display: flex;
     justify-content: space-around;
     width: 100%;
-
 }
 
 .banner{
@@ -41,7 +41,7 @@ a:active{
     border: 1px solid white;
     background-color: rgba(0,0,0, 0.4);
     border-radius: 4px;
-    padding:0 8px 0 8px;
+    padding:0 4px 0 4px;
     position: absolute;
     left: 250px;
     top: 100px;
@@ -73,12 +73,12 @@ table,th{
 }
 .input{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 4px;
 }
 .input>input{
     background-color: #0e0d0d;
-    padding: 8px;
+    padding: 4px;
     border-radius: 4px;
     text-align: center;
     border-style: none;
@@ -104,6 +104,7 @@ table,th{
     border-radius: 4px;
     align-content: center;
     justify-items: center;
+    
 }
 
 .gellary>div>img{
@@ -191,7 +192,7 @@ table,th{
 }
 /*MOBILE VIEW  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     body{
         overflow-x: hidden;
     }
@@ -230,7 +231,24 @@ table,th{
     .mile>div>button{
         text-align: center;
     }
-    
+    .input{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    gap: 1px;
+    }
+    .input>input{
+        background-color: #0e0d0d;
+        border-radius: 2px;
+        text-align: center;
+        border-style: none;
+    }
+    .input>select{
+        background-color: #0e0d0d;
+        border-radius: 4px;
+        text-align: center;
+        border-style: none;
+        color: white;
+    }
     .gellary{
         background-color: #22222222;
         padding: 8px;
@@ -250,8 +268,24 @@ table,th{
     }
 }
 
-
-
+/* small device */
+@media only screen and (max-width: 375px) {
+    .gellary>div>img{
+        border-radius: 4px;
+        width: 300px;
+        height: 200px;
+    }
+    .sticker1{
+        display: flex;
+        border: 1px solid white;
+        background-color: rgba(0,0,0, 0.4);
+        border-radius: 4px;
+        
+        position: absolute;
+        left: 175px;
+        top: 100px;
+    }
+}
 
 /* FONTS HERE */
 
