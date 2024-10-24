@@ -192,6 +192,9 @@ table,th{
 /*MOBILE VIEW  */
 
 @media only screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
     .inside-banner{
         display: flex;
         flex-direction: column;
