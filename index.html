@@ -17,7 +17,7 @@
 <body>
     <section class="banner">
         <nav class="navbar">
-            <h1 class="inter-uniquifier">Fitness</h1>
+            <h1 class="inter-uniquifier">Inshape</h1>
             <h1 class="icon"><i style="color:white;" class="fa-solid fa-bars"></i></h1>
             <div class="tabs">
                     <div class="links" style="display:flex;gap:8px;">
@@ -31,12 +31,12 @@
         <div class="inside-banner">
 
             <div style="word-wrap:break-word;">
-                    <p class="banner-text">Get body in <br><span class="miama">shape</span> & stay<br>healthy</p>
+                    <p class="banner-text">Shape <br>your</span> future</p>
                         <p>A huge selection of health and fitness content, healthy recipes and transformation stories to
                         help you
                         get fit and stay fit!</p>
                         <div style="display: flex; gap: 8px;">
-                            <button 
+                            <button onclick="joinAlert()"
                             style="background-color:#e64026;border-style:none; border-radius:12px; padding:8px 24px 8px 24px; font-size:18px; font-weight:semi-bold; color: white;">JOIN
                             NOW</button>
                             <button
@@ -287,6 +287,29 @@
         <hr style="color: black;"></hr>
         <p style="text-align:center;">All right reserved @fitness 2024 </p>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function joinAlert(){
+            
+            Swal.fire({
+  title: "Your Phone Number",
+  input: "text",
+  showDenyButton: false,
+  showCancelButton: true,
+  confirmButtonText: "Join",
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire("Congratulations", "", "success");
+  } 
+});
+
+
+
+        }
+    </script>
 </body>
 
 </html>
