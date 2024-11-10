@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
@@ -17,6 +20,7 @@
 <body>
     <section class="banner">
         <nav class="navbar">
+            <img src="./images/WhatsApp bbb.jpg" style="border-radius: 25px;" height="50px" width="50px"  alt="">
             <h1 class="inter-uniquifier">Inshape</h1>
             <h1 class="icon"><i style="color:white;" class="fa-solid fa-bars"></i></h1>
             <div class="tabs">
@@ -29,19 +33,16 @@
                 </div>
         </nav>
         <div class="inside-banner">
-
+            
             <div style="word-wrap:break-word;">
-                    <p class="banner-text">Shape <br>your</span> future</p>
-                        <p>A huge selection of health and fitness content, healthy recipes and transformation stories to
+                    <p class="banner-text titillium-web-light" >Shape <br>your</span> future</p>
+                        <p class="titillium-web-extralight">A huge selection of health and fitness content, healthy recipes and transformation stories to
                         help you
                         get fit and stay fit!</p>
                         <div style="display: flex; gap: 8px;">
                             <button onclick="joinAlert()"
                             style="background-color:#e64026;border-style:none; border-radius:12px; padding:8px 24px 8px 24px; font-size:18px; font-weight:semi-bold; color: white;">JOIN
-                            NOW</button>
-                            <button
-                                style="background-color:transparent; border: 1px solid white; border-radius:12px; opacity: 0.9;padding:8px 24px 8px 24px; font-size:18px; font-weight: semi-bold; color: white;padding: 5px;">DOWNLOAD
-                                APP</button>
+                            NOW</button>    
                         </div>
             </div>
                 
@@ -161,57 +162,7 @@
             </div>
         </section>
     
-        <div class="title">
-            <h1>Meet Our Team</h1>
-            <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
-        </div>
-        <div style="width: 100%;display:flex; justify-content: center;">
-            <div class="gellary">
-                <div style="position: relative;">
-                <img src="./images/trainer1.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Gerome Bell</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-                <div style="position: relative;">
-                <img src="./images/trainer2.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Kane William</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-                <div style="position: relative;">
-                <img src="./images/trainer3.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Nikolas Kalsen</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-                <div style="position: relative;">
-                <img src="./images/trainer4.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Insuf Sahome</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-                <div style="position: relative;">
-                <img src="./images/trainer5.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Darell Steward</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-                <div style="position: relative;">
-                <img src="./images/trainer6.png" alt="">
-                <div style="position: absolute; bottom:0;left:0;">
-                    <h1>Cady Fisher</h1>
-                    <h5>Trainer</h5>
-                </div>
-                </div>
-
-            </div>
-        </div>
+      
 <!-- Challenge Part -->
     <div style="background-color: #222222;">
     <h1 style="text-align: center;">Testimonials</h1>    
@@ -301,7 +252,7 @@
   confirmButtonText: "Join",
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
-  if (result.isConfirmed) {
+  if (result.isConfirmed>0) {
     Swal.fire("Congratulations", "", "success");
   } 
 });
